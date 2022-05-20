@@ -5,6 +5,10 @@
 
 trigger:
 - master
+- release/*
+
+pr:
+- feature/*
 
 strategy:
   matrix:
