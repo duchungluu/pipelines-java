@@ -20,11 +20,6 @@ strategy:
       imageName: "windows-latest"
   maxParallel: 3
 
-pool:
-  vmImage: $(imageName)
-
-strategy:
-  matrix:
     jdk10_linux:
       imageName: "ubuntu-latest"
       jdkVersion: "1.10"
@@ -32,6 +27,12 @@ strategy:
       imageName: "windows-latest"
       jdkVersion: "1.11"
   maxParallel: 2
+
+pool:
+  vmImage: $(imageName)
+
+
+
 
 steps:
 - task: Maven@3
